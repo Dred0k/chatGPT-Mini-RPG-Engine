@@ -21,17 +21,16 @@ func attack():
 	#return randi()%20+1 + attack_bonus # +1 to make die rolls minium 1
 	pass
 
-func take_damage(atk: int, dmg: int): #atk- incomming attack total, dmg- incomming damage total
+func take_damage(atk: int, dmg: int) -> bool: #atk- incomming attack total, dmg- incomming damage total
 	if atk >= armor_class:
 		current_hp -= dmg #0 unconcious/incompasitated, -1 and less is dead
-		if current_hp >= -1:
+		if current_hp <= -1:
 			die()
 		else:
 			pass
-		print("Hit")
+		
 		return true #returns true for Hit and fale for miss
 	else:
-		print("Miss")
 		return false
 
 	
@@ -40,5 +39,6 @@ func die():
 
 
 	
-func heal():
-	pass
+func heal(amount: int):
+	current_hp += amount
+	current_hp = clampi(current_hp, 0, max_hp)
