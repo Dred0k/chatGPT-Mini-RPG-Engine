@@ -1,11 +1,16 @@
 class_name Battle
 extends Resource
 
+var combatant_generator := CombatantGenerator.new()
 
-var hero = Combatants.create_hero()
-var goblin = Combatants.create_goblin()
-	
-	
+var hero: Combatant = combatant_generator.create_hero()
+var goblin: Combatant = combatant_generator.create_goblin()
+
+var turn_order = []
+
+func setup_battle() -> void:
+	turn_order.append(hero)
+	turn_order.append(goblin)
+
 func _ready() -> void:
-	battle.add_combatant(hero)
-	battle.add_combatant(goblin)
+	print(hero.current_hp)

@@ -13,3 +13,6 @@ A Weapon owns its damage bonus.
 An Inventory owns the items it contains.
 
 ## 7/22/2026 Sprint 1: Combat Foundations
+
+## 7/27/2026 Sprint 2
+made a mess of things trying to get Combatant -> combatants_generator -> battle

@@ -1,4 +1,4 @@
-class_name Combatants
+class_name CombatantGenerator
 extends Resource
 
 
