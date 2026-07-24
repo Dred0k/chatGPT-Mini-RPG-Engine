@@ -22,7 +22,7 @@ func create_goblin():
 	goblin.combatant_name = "Goblin"
 	goblin.max_hp = 20
 	goblin.current_hp = 20
-	goblin.alignment = "foe"
+	#goblin.alignment = "foe" #same as template, unneeded
 	#goblin.attack_bonus = 0 #same as template, unneeded
 	#goblin.damage_bonus = 5 #same as template, unneeded
 	#goblin.armor_class = 10 #same as template, unneeded
