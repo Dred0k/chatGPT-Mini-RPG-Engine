@@ -22,11 +22,23 @@ func attack():
 	pass
 
 func take_damage(atk: int, dmg: int): #atk- incomming attack total, dmg- incomming damage total
-	if atk > armor_class:
-		current_hp -= dmg
+	if atk >= armor_class:
+		current_hp -= dmg #0 unconcious/incompasitated, -1 and less is dead
+		if current_hp >= -1:
+			die()
+		else:
+			pass
+		print("Hit")
+		return true #returns true for Hit and fale for miss
+	else:
+		print("Miss")
+		return false
+
+	
+func die():
+	is_dead = true
+
+
 	
 func heal():
-	pass
-
-func die():
 	pass
